@@ -91,12 +91,12 @@ public void setTours(List<Tours> tours) {
 	this.tours = tours;
 }
 
-public TravelOwner(String tname, String uname, List<Tours> tours, String password, Date dob, String conact,
+public TravelOwner(String tname, String uname,  String password, Date dob, String conact,
 		String gstNumber) {
 	super();
 	this.tname = tname;
 	this.uname = uname;
-	this.tours = tours;
+	
 	this.password = password;
 	this.dob = dob;
 	this.conact = conact;
@@ -106,12 +106,6 @@ public TravelOwner(String tname, String uname, List<Tours> tours, String passwor
 public TravelOwner() {
 	super();
 	System.out.println("IN Travel Owner Def pojo..!");
-}
-
-@Override
-public String toString() {
-	return "TravelOwner [tid=" + tid + ", tname=" + tname + ", uname=" + uname + ", tours=" + tours + ", password="
-			+ password + ", dob=" + dob + ", conact=" + conact + ", gstNumber=" + gstNumber + "]";
 }
 
 

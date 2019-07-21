@@ -1,5 +1,7 @@
 package com.app.dao;
 
+import java.util.List;
+
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -10,7 +12,7 @@ import com.app.pojos.TravelOwner;
 
 @Transactional
 @Repository
-public class Tdao implements ITdao {
+public class Tdao implements Itdao {
 	@Autowired
 	private SessionFactory sf;
 	
@@ -24,10 +26,10 @@ public class Tdao implements ITdao {
 		sf.getCurrentSession().persist(t);
 	}
 
-	@Override
-	public void registration(TravelOwner t) {
+	public List<Tours> gettour(String dep, String arr) {
 		// TODO Auto-generated method stub
-		sf.getCurrentSession().persist(t);
+		String jpql="select t from Tours t where t.source:=so and t.destination:=de";
+		return sf.getCurrentSession().createQuery(jpql, Tours.class).setParameter("em", dep).setParameter("de", arr).getResultList();
 	}
 
 }

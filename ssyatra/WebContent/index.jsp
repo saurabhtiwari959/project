@@ -7,7 +7,7 @@
 <title>Login</title>
 </head>
 <body>
-
-<h1><a href="Trav/regi">ADDTravelAgency</a></h1>
+<a href="admin/add"><h1>ADD new Travel Agency</h1>
+<a href="admin/listtour"><h1>serach Tours</h1>
 </body>
 </html>
